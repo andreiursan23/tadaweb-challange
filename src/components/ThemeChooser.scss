@@ -1,0 +1,98 @@
+@import '../styles/variables.scss';
+@import '../styles/typography.scss';
+@import '../styles/base.scss';
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  height: 100%;
+  position: relative;
+
+  .dark-theme-side,
+  .light-theme-side {
+    width: 50vw;
+    min-height: 100vh;
+    height: 100%;
+    transition: width .3s ease-in-out;
+    position: relative;
+
+    .dark-theme-logo,
+    .light-theme-logo {
+      transform: scale(0);
+      transition: transform .4s ease-in-out;
+    }
+
+    .dark-theme-logo {
+      filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(41deg) brightness(105%) contrast(94%);
+    }
+
+    .light-theme-logo {
+      filter: invert(7%) sepia(18%) saturate(2806%) hue-rotate(164deg) brightness(98%) contrast(91%); 
+    }
+    
+    &.allow-user-to-select {
+      cursor: pointer;
+
+      &:hover {
+        width: 80vw;
+      }
+
+      .dark-theme-logo,
+      .light-theme-logo {
+        height: 5rem;
+        position: absolute;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        top: 65%;
+        transform: scale(1);
+      }
+    }
+  }
+  
+  .dark-theme-side {
+    background-color: $dark-blue-01;
+  }
+  
+  .light-theme-side {
+    background-color: $white-02;
+  }
+
+  .tadaweb-logo {
+    height: 6rem;
+    width: auto;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    top: 25%;
+    transform: scale(0);
+    transition: transform .6s ease-in-out;
+  }
+
+  .question-theme {
+    font-family: $saira-semi-condensed;
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: $light-blue-01;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    width: max-content;
+    top: 45%;
+    opacity: 0;
+    transition: opacity .5s ease-in-out .6s;
+  }
+
+  &.first-render {
+    .tadaweb-logo {
+      transform: scale(1);
+    }
+
+    .question-theme {
+      opacity: 1;
+    }
+  }
+}

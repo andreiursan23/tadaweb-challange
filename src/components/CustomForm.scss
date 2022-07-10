@@ -1,0 +1,50 @@
+@import '../styles/variables.scss';
+@import '../styles/typography.scss';
+@import '../styles/base.scss';
+
+.form {
+  .add-field-form-title {
+    font-family: $saira-semi-condensed;
+    font-weight: 400;
+    font-size: 1.4rem;
+    margin: 0 0 1em 0;
+
+    .accent-color {
+      color: $light-blue-01;
+    }
+  }
+
+  .add-field-container {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 3rem;
+
+    @media (max-width: $breakpoint-mobile) {
+      flex-direction: column;
+      align-items: start;
+    }
+  }
+
+  .data-form {
+    background-color: $dark-blue-02;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .data-form-title {
+      font-family: $saira-semi-condensed;
+      font-weight: 500;
+      font-size: 1.6rem;
+      margin: 0 0 1em 0;
+      letter-spacing: 0.04em;
+    }
+
+    .empty-data-text {
+      font-family: $saira-semi-condensed;
+      font-weight: 500;
+      font-size: 1.7rem;
+      margin: 0 0 1em 0;
+    }
+  }
+}

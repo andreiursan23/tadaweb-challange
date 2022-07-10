@@ -1,0 +1,76 @@
+@import '../styles/variables.scss';
+@import '../styles/typography.scss';
+@import '../styles/base.scss';
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  background: $transparent-black;
+
+  .guide-container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    width: 50%;
+    background-color: $dark-blue-01;
+    padding: 3rem;
+    border: 2px solid $light-blue-01;
+
+    .guide-text {
+      font-family: $saira-semi-condensed;
+      font-weight: 500;
+      font-size: 2rem;
+      color: $white-02;
+
+      &:not(:last-of-type) {
+        margin: 0 0 1em 0;
+      }
+    }
+
+    .guide-steps-list {
+      margin: 0 0 1.6rem 0;
+
+      li {
+        font-family: $saira-semi-condensed;
+        font-weight: 300;
+        font-size: 1.2rem;
+        color: $white-02;
+        line-height: 1.4;
+        margin: 0 0 0.6em 0;
+      }
+    }
+
+    .close-btn {
+      position: absolute;
+      right: 0.4rem;
+      top: 0.6rem;
+      border: none;
+      background-color: transparent;
+      height: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transform: scale(1);
+      transition: transform 0.3s ease-in-out;
+
+      &:hover,
+      &:focus {
+        transform: scale(1.1);
+      }
+
+      img {
+        height: 1.4rem;
+      }
+    }
+  }
+}

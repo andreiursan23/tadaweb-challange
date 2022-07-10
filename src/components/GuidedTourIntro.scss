@@ -1,0 +1,31 @@
+@import '../styles/variables.scss';
+@import '../styles/typography.scss';
+@import '../styles/base.scss';
+
+.guided-tour-container {
+  .guided-tour-text {
+    font-family: $saira-semi-condensed;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    margin: 0 0 1.2em 0;
+
+    .skip-tour-btn {
+      background-color: transparent;
+      color: $light-blue-01;
+      font-family: $saira-semi-condensed;
+      border: none;
+      margin: 0;
+      padding: 0;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 1.5rem;
+      line-height: 1.5;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+  }
+}

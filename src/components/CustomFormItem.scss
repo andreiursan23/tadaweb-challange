@@ -1,0 +1,159 @@
+@import '../styles/variables.scss';
+@import '../styles/typography.scss';
+@import '../styles/base.scss';
+
+.create-field-form {
+  display: flex;
+  flex-direction: column;
+  width: 40rem;
+  @media (max-width: $breakpoint-mobile) {
+    width: 100%;
+  }
+
+  .form-field {
+    display: flex;
+    margin: 0 2rem 0.8rem 0;
+    @media (max-width: $breakpoint-mobile) {
+      flex-direction: column;
+      margin: 0 0 0.8rem 0;
+    }
+
+    &:last-child {
+      margin: 0 2rem 0 0;
+      @media (max-width: $breakpoint-mobile) {
+        margin: 0 0 1.4rem 0;
+      }
+    }
+    
+    label {
+      width: 4.4rem;
+      font-family: $saira-semi-condensed;
+      font-size: 1.2rem;
+      font-weight: 300;
+      line-height: 1.5;
+      @media (max-width: $breakpoint-mobile) {
+        width: 100%;
+      }
+    }
+
+    input {
+      width: 32rem;
+      padding: 0 0.6rem;
+      border: 1px solid $light-blue-01;
+      border-radius: 0.6rem;
+      outline: none;
+      font-size: 0.8rem;
+      @media (max-width: $breakpoint-mobile) {
+        width: 100%;
+        max-width: 36rem;
+        height: 1.8rem;
+      }
+
+      &::placeholder {
+        font-family: $saira-semi-condensed;
+        font-size: 0.8rem;
+        font-weight: 300;
+        line-height: 1.5;
+        color: $gray-02;
+      }
+
+      &:focus {
+        background-color: $dark-blue-02;
+        color: $pure-white;
+
+        &::placeholder {
+          color: $pure-white;
+        }
+      }
+
+      &[type='date'],
+      &[type='time'] {
+        font-family: $saira-semi-condensed;
+        font-size: 0.8rem;
+        font-weight: 300;
+        line-height: 1.5;
+      }
+    }
+
+    select {
+      width: 33.3rem;
+      font-family: $saira-semi-condensed;
+      font-size: 0.8rem;
+      font-weight: 300;
+      line-height: 1.5;
+      padding: 0 0.6rem;
+      border: 1px solid $light-blue-01;
+      border-radius: 0.6rem;
+      outline: none;
+      color: $gray-02;
+      @media (max-width: $breakpoint-mobile) {
+        width: 100%;
+        max-width: 37.3rem;
+        font-size: 1rem;
+      }
+
+      &:focus {
+        background-color: $dark-blue-02;
+        color: $pure-white;
+      }
+    }
+  }
+}
+
+.display-data-field {
+  .saved-data-label {
+    font-family: $saira-semi-condensed;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    font-weight: 400;
+    text-transform: capitalize;
+    letter-spacing: 0.04em;
+  }
+
+  .form-field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 1rem 0;
+    min-height: 2.4rem;
+    min-width: 36rem;
+    
+    input {
+      min-width: 78%;
+      min-height: 2rem;
+      padding: 0 0.6rem;
+      border: 1px solid $light-blue-01;
+      border-radius: 0.6rem;
+      outline: none;
+  
+      &::placeholder {
+        font-family: $saira-semi-condensed;
+        font-size: 0.8rem;
+        font-weight: 300;
+        line-height: 1.5;
+        color: $gray-02;
+      }
+  
+      &:focus {
+        background-color: $dark-blue-02;
+        color: $pure-white;
+  
+        &::placeholder {
+          color: $pure-white;
+        }
+      }
+  
+      &[type='date'],
+      &[type='time'] {
+        font-family: $saira-semi-condensed;
+        font-size: 0.8rem;
+        font-weight: 300;
+        line-height: 1.5;
+      }
+
+      &.full-width {
+        min-width: 100%;
+      }
+    }
+  }
+}

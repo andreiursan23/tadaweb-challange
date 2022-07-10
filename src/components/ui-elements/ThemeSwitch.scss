@@ -1,0 +1,63 @@
+@import '../../styles/variables.scss';
+@import '../../styles/typography.scss';
+@import '../../styles/base.scss';
+
+.switch {
+  position: fixed;
+  display: inline-block;
+  width: 5.2rem;
+  height: 2.5rem;
+
+  & input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+
+    &:checked + .slider {
+      background-color: $light-blue-01;
+      background-image: url('../../assets/theme-dark-switch.svg');
+      background-position: 0.6rem center;
+      background-repeat: no-repeat;
+      background-size: 1.6rem;
+
+      &::before {
+        transform: translateX(2.6rem);
+      }
+    }
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: .4s;
+    background-color: $light-blue-01;
+    background-image: url('../../assets/theme-light-switch.svg');
+    background-position: 3rem center;
+    background-repeat: no-repeat;
+    background-size: 1.6rem;
+
+    &::before {
+      position: absolute;
+      content: "";
+      height: 2rem;
+      width: 2rem;
+      left: 0.3rem;
+      bottom: 0.24rem;
+      background-color: $dark-blue-01;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+
+    &.round {
+      border-radius: 1.5rem;
+
+      &::before {
+        border-radius: 50%;
+      }
+    }
+  }
+}

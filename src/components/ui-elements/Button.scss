@@ -1,0 +1,70 @@
+@import '../../styles/variables.scss';
+@import '../../styles/typography.scss';
+@import '../../styles/base.scss';
+
+.btn {
+  font-family: $saira-semi-condensed;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  padding: 0.5em 2.5em;
+  border-radius: 1.5em;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+
+  &.s {
+    font-size: 0.6rem;
+  }
+
+  &.m {
+    font-size: 0.9rem;
+  }
+
+  &.l {
+    font-size: 1.75rem;
+  }
+  
+  &.dark {
+    background-color: $light-blue-01;
+    color: $dark-blue-01;
+    border: 2px solid $light-blue-01;
+
+    &:hover,
+    &:focus {
+      background-color: $dark-blue-01;
+      color: $light-blue-01;
+    }
+  }
+
+  &.light {
+    background-color: $light-blue-01;
+    color: $dark-blue-01;
+    border: 2px solid $light-blue-01;
+
+    &:hover,
+    &:focus {
+      background-color: $dark-blue-01;
+      color: $light-blue-01;
+    }
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+
+    &.dark {  
+      &:hover,
+      &:focus {
+        background-color: $light-blue-01;
+        color: $dark-blue-01;
+      }
+    }
+  
+    &.light {
+      &:hover,
+      &:focus {
+        background-color: $light-blue-01;
+        color: $dark-blue-01;
+      }
+    }
+  }
+}
