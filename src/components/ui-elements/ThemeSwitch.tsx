@@ -30,11 +30,12 @@ const ThemeSwitch: React.FC<Props> = ({ colorsTheme, isFirstLogin, setColorsThem
     if (colorsTheme === 'light') {
       setCheckboxValue(true);
     }
-  }, [isFirstLogin, colorsTheme]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isFirstLogin]);
 
   useEffect(() => {
     setColorsTheme(checkboxValue === true ? 'light' : 'dark');
-  }, [checkboxValue, setColorsTheme])
+  }, [checkboxValue, setColorsTheme]);
 
   return (
     <label className='switch'>
