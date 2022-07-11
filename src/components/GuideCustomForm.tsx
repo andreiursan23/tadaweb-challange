@@ -19,10 +19,14 @@ const guideStepsList: GuideSteps[] = [
   },
   {
     id: 3,
-    text: '4. You can also edit the information, from the view accessible clicking on "Edit form" at the top right of the page.',
+    text: '4. You can also remove one element, or remove all. Also, click on "Save" after doing the changes.',
   },
   {
     id: 4,
+    text: '5. You can also edit the information, from the view accessible clicking on "Edit form" at the top right of the page.',
+  },
+  {
+    id: 6,
     text: `5. After you finish editing, don't forget to click on "Save" again.`,
   },
 ]
