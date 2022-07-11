@@ -101,6 +101,10 @@
 }
 
 .display-data-field {
+  @media (max-width: $breakpoint-mobile) {
+    width: 90%;
+  }
+
   .saved-data-label {
     font-family: $saira-semi-condensed;
     font-size: 1.2rem;
@@ -117,6 +121,11 @@
     margin: 0 0 1rem 0;
     min-height: 2.4rem;
     min-width: 36rem;
+
+    @media (max-width: $breakpoint-mobile) {
+      min-width: 100%;
+      margin: 0 0 1.6rem 0;
+    }
     
     input {
       min-width: 78%;
@@ -125,6 +134,9 @@
       border: 1px solid $light-blue-01;
       border-radius: 0.6rem;
       outline: none;
+      @media (max-width: $breakpoint-mobile) {
+        min-width: 72%;
+      }
   
       &::placeholder {
         font-family: $saira-semi-condensed;
@@ -152,7 +164,7 @@
       }
 
       &.full-width {
-        min-width: 100%;
+        min-width: 95%;
       }
     }
   }

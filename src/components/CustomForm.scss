@@ -46,5 +46,18 @@
       font-size: 1.7rem;
       margin: 0 0 1em 0;
     }
+
+    .control-btn-container {
+      width: 80%;
+      display: flex;
+      justify-content: space-evenly;
+      @media (max-width: $breakpoint-mobile) {
+        flex-direction: column;
+        
+        .btn:first-of-type {
+          margin: 0 0 0.8em 0;
+        }
+      }
+    }
   }
 }

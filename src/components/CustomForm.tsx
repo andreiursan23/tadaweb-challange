@@ -50,6 +50,14 @@ const CustomForm: React.FC<Props> = ({
     }
   }
 
+  const removeAllItems = () => {
+    setFormItems([]);
+    counterFormItems.current = 0;
+    if (counterFormItems.current === 0) {
+      setIsFormEditable(false);
+    }
+  }
+
   const saveFormLocally = () => {
     setInLocalStorage('locallySavedFormItems', formItems);
     if (counterFormItems.current !== 0) {
@@ -97,13 +105,25 @@ const CustomForm: React.FC<Props> = ({
             <p className='empty-data-text'>Your form data will be displayed here, after you add some values</p>
           }
 
-          <Button 
-            textBtn='Save'
-            size='l'
-            colorsTheme={`${colorsTheme}`}
-            disabled={false}
-            handleClick={saveFormLocally}
-          />
+          <div className="control-btn-container">
+            {formItems.length !== 0 && 
+              <Button 
+              textBtn='Remove all'
+              size='l'
+              colorsTheme={`${colorsTheme}`}
+              disabled={false}
+              handleClick={removeAllItems}
+              />
+            }
+
+            <Button 
+              textBtn='Save'
+              size='l'
+              colorsTheme={`${colorsTheme}`}
+              disabled={false}
+              handleClick={saveFormLocally}
+            />
+          </div>
         </form>
       </div>
 
