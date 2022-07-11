@@ -134,6 +134,8 @@
       border: 1px solid $light-blue-01;
       border-radius: 0.6rem;
       outline: none;
+      font-family: $saira-semi-condensed;
+      font-size: 1rem;
       @media (max-width: $breakpoint-mobile) {
         min-width: 72%;
       }
